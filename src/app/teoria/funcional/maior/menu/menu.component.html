@@ -1,0 +1,65 @@
+<div id="wrapper">
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <!-- Draw Chords -->
+            <div class="popup" id="popup">
+                <div class="popup-inner">
+                    <div class="popup__text">
+                        <!-- 
+                        <app-draw-chords></app-draw-chords>
+                    -->
+                    </div>
+                    <a class="popup__close" href="#">X</a>
+                </div>
+            </div>
+            <!-- Menu Selecionado -->
+            <div>
+                <div *ngIf="menuSelecionado[0].Status === 'ActiveMenu'">
+                    <app-introducao></app-introducao>
+                </div>
+                <div *ngIf="menuSelecionado[1].Status === 'ActiveMenu'">
+                    <app-cadencia></app-cadencia>
+                </div>
+                <div *ngIf="menuSelecionado[2].Status === 'ActiveMenu'">
+                    <app-acordes></app-acordes>
+                </div>
+                <div *ngIf="menuSelecionado[3].Status === 'ActiveMenu'">
+                    <app-dominante></app-dominante>
+                </div>
+                <div *ngIf="menuSelecionado[4].Status === 'ActiveMenu'">
+                    <app-dominante-secundaria></app-dominante-secundaria>
+                </div>
+                <div *ngIf="menuSelecionado[5].Status === 'ActiveMenu'">
+                    <app-progressao></app-progressao>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+            <!-- Menu -->
+            <nav class="menu">
+                <header class="major">
+                    <h2>O Modo Maior</h2>
+                </header>
+                <ul>
+                    <li><a class={{menuSelecionado[0].Status}} (click)="changeMenu(0)">Introdução</a></li>
+                    <li><a class={{menuSelecionado[1].Status}} (click)="changeMenu(1)">Cadência</a></li>
+                    <li><a class={{menuSelecionado[2].Status}} (click)="changeMenu(2)">Acordes</a></li>
+                    <li><a class={{menuSelecionado[3].Status}} (click)="changeMenu(3)">Dominantes</a></li>
+                    <li><a class={{menuSelecionado[4].Status}} (click)="changeMenu(4)">Dominantes secundárias</a></li>
+                    <li><a class={{menuSelecionado[5].Status}} (click)="changeMenu(5)">A progressão II- &#8594; V</a></li>
+                    <li><a>Subdominantes</a></li>
+                    <li><a>Diminutos</a></li>
+                    <li><a>Resumo</a></li>
+                </ul>
+                <!-- Footer -->
+                <footer id="footer">
+                </footer>
+            </nav>
+        </div>
+    </div>
+</div>

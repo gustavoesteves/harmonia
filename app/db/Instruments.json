@@ -1,0 +1,301 @@
+[
+    {
+        "Name": "Piano",
+        "Strings": []
+    },
+    {
+        "Name": "Baixo 4 cordas",
+        "Strings": [
+            {
+                "Note": "E",
+                "Position": 1
+            },
+            {
+                "Note": "A",
+                "Position": 2
+            },
+            {
+                "Note": "D",
+                "Position": 3
+            },
+            {
+                "Note": "G",
+                "Position": 4
+            }
+        ]
+    },
+    {
+        "Name": "Baixo 5 cordas",
+        "Strings": [
+            {
+                "Note": "B",
+                "Position": 1
+            },
+            {
+                "Note": "E",
+                "Position": 2
+            },
+            {
+                "Note": "A",
+                "Position": 3
+            },
+            {
+                "Note": "D",
+                "Position": 4
+            },
+            {
+                "Note": "G",
+                "Position": 5
+            }
+        ]
+    },
+    {
+        "Name": "Baixo 6 cordas",
+        "Strings": [
+            {
+                "Note": "B",
+                "Position": 1
+            },
+            {
+                "Note": "E",
+                "Position": 2
+            },
+            {
+                "Note": "A",
+                "Position": 3
+            },
+            {
+                "Note": "D",
+                "Position": 4
+            },
+            {
+                "Note": "G",
+                "Position": 5
+            },
+            {
+                "Note": "C",
+                "Position": 6
+            }
+        ]
+    },
+    {
+        "Name": "Bandolim 8 cordas",
+        "Strings": [
+            {
+                "Note": "G",
+                "Position": 1
+            },
+            {
+                "Note": "D",
+                "Position": 2
+            },
+            {
+                "Note": "A",
+                "Position": 3
+            },
+            {
+                "Note": "E",
+                "Position": 4
+            }
+        ]
+    },
+    {
+        "Name": "Bandolim 10 cordas",
+        "Strings": [
+            {
+                "Note": "C",
+                "Position": 1
+            },
+            {
+                "Note": "G",
+                "Position": 2
+            },
+            {
+                "Note": "D",
+                "Position": 3
+            },
+            {
+                "Note": "A",
+                "Position": 4
+            },
+            {
+                "Note": "E",
+                "Position": 5
+            }
+        ]
+    },
+    {
+        "Name": "Cavaquinho",
+        "Strings": [
+            {
+                "Note": "D",
+                "Position": 1
+            },
+            {
+                "Note": "G",
+                "Position": 2
+            },
+            {
+                "Note": "B",
+                "Position": 3
+            },
+            {
+                "Note": "D",
+                "Position": 4
+            }
+        ]
+    },
+    {
+        "Name": "Violão",
+        "Strings": [
+            {
+                "Note": "E",
+                "Position": 1
+            },
+            {
+                "Note": "A",
+                "Position": 2
+            },
+            {
+                "Note": "D",
+                "Position": 3
+            },
+            {
+                "Note": "G",
+                "Position": 4
+            },
+            {
+                "Note": "B",
+                "Position": 5
+            },
+            {
+                "Note": "E",
+                "Position": 6
+            }
+        ]
+    },
+    {
+        "Name": "Violão 6a em D",
+        "Strings": [
+            {
+                "Note": "D",
+                "Position": 1
+            },
+            {
+                "Note": "A",
+                "Position": 2
+            },
+            {
+                "Note": "D",
+                "Position": 3
+            },
+            {
+                "Note": "G",
+                "Position": 4
+            },
+            {
+                "Note": "B",
+                "Position": 5
+            },
+            {
+                "Note": "E",
+                "Position": 6
+            }
+        ]
+    },
+    {
+        "Name": "Violão 7a em B",
+        "Strings": [
+            {
+                "Note": "B",
+                "Position": 1
+            },
+            {
+                "Note": "E",
+                "Position": 2
+            },
+            {
+                "Note": "A",
+                "Position": 3
+            },
+            {
+                "Note": "D",
+                "Position": 4
+            },
+            {
+                "Note": "G",
+                "Position": 5
+            },
+            {
+                "Note": "B",
+                "Position": 6
+            },
+            {
+                "Note": "E",
+                "Position": 7
+            }
+        ]
+    },
+    {
+        "Name": "Violão 7a em C",
+        "Strings": [
+            {
+                "Note": "C",
+                "Position": 1
+            },
+            {
+                "Note": "E",
+                "Position": 2
+            },
+            {
+                "Note": "A",
+                "Position": 3
+            },
+            {
+                "Note": "D",
+                "Position": 4
+            },
+            {
+                "Note": "G",
+                "Position": 5
+            },
+            {
+                "Note": "B",
+                "Position": 6
+            },
+            {
+                "Note": "E",
+                "Position": 7
+            }
+        ]
+    },
+    {
+        "Name": "Violão D aberto",
+        "Strings": [
+            {
+                "Note": "D",
+                "Position": 1
+            },
+            {
+                "Note": "G",
+                "Position": 2
+            },
+            {
+                "Note": "C",
+                "Position": 3
+            },
+            {
+                "Note": "F",
+                "Position": 4
+            },
+            {
+                "Note": "A",
+                "Position": 5
+            },
+            {
+                "Note": "D",
+                "Position": 6
+            }
+        ]
+    }
+]

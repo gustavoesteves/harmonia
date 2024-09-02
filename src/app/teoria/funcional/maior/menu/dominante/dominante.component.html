@@ -1,0 +1,197 @@
+<section>
+    <div class="content">
+        <header>
+            <h2>Dominantes</h2>
+        </header>
+        <div class="row">
+            <div class="col-4 col-12-medium">
+                <p>Os acordes Dominantes podem ter tensões com intervalos: Opcionais, Alterados ou Simétricosque. Esse
+                    intevalos criam uma instabilidade tonal maior que nos força a resolução V7 &#8594; Imaj7. Além deles
+                    mostraremos também o acorde suspenso.
+                </p>
+                <p>
+                    Para os acordes Alterados (b5) ainda poderíamos pensar em resolver o V7 &#8594; Imaj7, como V7b5b9
+                    &#8594;
+                    Im7.
+                </p>
+                <p>Algumas dicas para acordes dominantes:
+                </p>
+                <ul>
+                    <li>Acordes Dominantes podem conter notas não diatônicas</li>
+                    <li>Adicionar tensões cromáticas ao acorde Dominante aumenta a expectativa de resolução</li>
+                    <li>A única nota não admitida é a 11a</li>
+                    <li>Se a 5a do acorde estiver presente a b13 deve ser evitada</li>
+                    <li>Dominantes com a 13a criam expectativa de resolução em acorde maior</li>
+                    <li>Dominantes com a b13 criam expectativa de resolução em acorde menor</li>
+                    <li>Todas as escalas Dominantes contem a fundamental, 3a maior e 7a menor</li>
+                </ul>
+            </div>
+            <div class="col-8 col-12-medium">
+                <ul class="actions">
+                    <li><a class={{menuSelecionado[0].Status}} (click)="changeMenu(0)">Suspenso</a></li>
+                    <li><a class={{menuSelecionado[1].Status}} (click)="changeMenu(1)">Opcionais</a></li>
+                    <li><a class={{menuSelecionado[2].Status}} (click)="changeMenu(2)">Alterados</a></li>
+                    <li><a class={{menuSelecionado[3].Status}} (click)="changeMenu(3)">Simétricos</a></li>
+                </ul>
+                <!--
+                <div *ngIf="menuSelecionado[0].Status === 'button primary fit small'">
+                    <p>O acorde suspenso ou sus4, é quase uma entidade harmônica independente comumente utilizada em
+                        algumas
+                        cadências. Não existe propriamente uma dissonância.</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let column of header" scope="col">{{column}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of acordeSus">
+                                <td *ngFor="let column of header">
+                                    <div *ngIf="column === 'Acorde'">
+                                        <div [innerHTML]="item.Roman"></div>
+                                        <a class="loadChords" href="#popup" [innerHTML]="item.Acorde"
+                                            (click)="loadChords(item)"></a>
+                                    </div>
+                                    <div *ngIf="column != 'Acorde'" [innerHTML]="item[column]"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div *ngIf="menuSelecionado[1].Status === 'button primary fit small'">
+                    <ul class="actions">
+                        <li><a class={{menuOpcionais[0].Status}} (click)="changeOpicionais(0)">V7(b9 13)</a></li>
+                        <li><a class={{menuOpcionais[1].Status}} (click)="changeOpicionais(1)">V7(b9 b13)</a></li>
+                        <li><a class={{menuOpcionais[2].Status}} (click)="changeOpicionais(2)">V7(b9 #9 b13)</a></li>
+                    </ul>
+                    <div *ngIf="menuOpcionais[0].Status === 'button primary fit small'">
+                        <h3>Opcionais V7(b9 13)</h3>
+                        <p>Contendo três acordes possíveis: V7(b9), V7(13) e V7(b9 13)</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th *ngFor="let column of header" scope="col">{{column}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of primeiraOpcional">
+                                    <td *ngFor="let column of header">
+                                        <div *ngIf="column === 'Acorde'">
+                                            <div [innerHTML]="item.Roman"></div>
+                                            <a class="loadChords" href="#popup" [innerHTML]="item.Acorde"
+                                                (click)="loadChords(item)"></a>
+                                        </div>
+                                        <div *ngIf="column != 'Acorde'" [innerHTML]="item[column]"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div *ngIf="menuOpcionais[1].Status === 'button primary fit small'">
+                        <h3>Opcionais V7(b9 b13)</h3>
+                        <p>Acima já citamos o V7(b9) então mostraremos só os dois acordes não vistos: V7(b13) e V7(b9
+                            b13)
+                        </p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th *ngFor="let column of header" scope="col">{{column}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of segundaOpcional">
+                                    <td *ngFor="let column of header">
+                                        <div *ngIf="column === 'Acorde'">
+                                            <div [innerHTML]="item.Roman"></div>
+                                            <a class="loadChords" href="#popup" [innerHTML]="item.Acorde"
+                                                (click)="loadChords(item)"></a>
+                                        </div>
+                                        <div *ngIf="column != 'Acorde'" [innerHTML]="item[column]"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div *ngIf="menuOpcionais[2].Status === 'button primary fit small'">
+                        <h3>Opcionais V7(b9 #9 b13)</h3>
+                        <p>Seguiremos sem a duplicação desnecessária de acordes, sendo os restantes: V7(#9), V7(b9 #9),
+                            V7(#9
+                            b13) e
+                            V7(b9 #9 b13)</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th *ngFor="let column of header" scope="col">{{column}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of terceiraOpcional">
+                                    <td *ngFor="let column of header">
+                                        <div *ngIf="column === 'Acorde'">
+                                            <div [innerHTML]="item.Roman"></div>
+                                            <a class="loadChords" href="#popup" [innerHTML]="item.Acorde"
+                                                (click)="loadChords(item)"></a>
+                                        </div>
+                                        <div *ngIf="column != 'Acorde'" [innerHTML]="item[column]"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div *ngIf="menuSelecionado[2].Status === 'button primary fit small'">
+                    <h3>Alteradas V7b5(b9 #9 b13)</h3>
+                    <p>Contendo oito acordes possíveis: V7b5, V7b5(b9), V7b5(#9), V7b5(b13), V7b5(b9 #9), V7b5(b9
+                        b13), V7b5(#9 b13), V7b5(b9 #9 b13)</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let column of header" scope="col">{{column}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of alteredDominant">
+                                <td *ngFor="let column of header">
+                                    <div *ngIf="column === 'Acorde'">
+                                        <div [innerHTML]="item.Roman"></div>
+                                        <a class="loadChords" href="#popup" [innerHTML]="item.Acorde"
+                                            (click)="loadChords(item)"></a>
+                                    </div>
+                                    <div *ngIf="column != 'Acorde'" [innerHTML]="item[column]"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div *ngIf="menuSelecionado[3].Status === 'button primary fit small'">
+                    <h3>Simétricas V7(9b, #9, #11, 13)</h3>
+                    <p>Sendo a 13 extenção obrigatoria, teremos: V7(b9 13), V7(#9 13), V7(#11 13), V7(9b #9 13), V7(#9
+                        #11
+                        13),
+                        V7(9b #9 #11 13)</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let column of header" scope="col">{{column}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr *ngFor="let item of symetricDominant">
+                                <td *ngFor="let column of header">
+                                    <div *ngIf="column === 'Acorde'">
+                                        <div [innerHTML]="item.Roman"></div>
+                                        <a class="loadChords" href="#popup" [innerHTML]="item.Acorde"
+                                            (click)="loadChords(item)"></a>
+                                    </div>
+                                    <div *ngIf="column != 'Acorde'" [innerHTML]="item[column]"></div>
+                                </td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</section>

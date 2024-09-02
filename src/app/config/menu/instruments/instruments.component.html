@@ -1,0 +1,26 @@
+<section>
+    <div class="content">
+        <header>
+            <h2>Instrumentos</h2>
+        </header>
+        <div class="row">
+            <div class="col-3 col-12-medium">
+                <p>Esta configuração é dedicada aos instrumentos de corda, que refletem nos diagramas dos acordes
+                    gerados. Como temos muitas possibilidades de afinação de cada um instrumento desse tipo bem como uma
+                    quantidade de cordas para cada um, temos aqui, a possibilidade de criar essas variações</p>
+            </div>
+            <div class="col-9 col-12-medium">
+                <ul class="actions">
+                    <li><a class={{menuSelecionado[0].Status}} (click)="changeMenu(0)">Editar</a></li>
+                    <li><a class={{menuSelecionado[1].Status}} (click)="changeMenu(1)">Criar</a></li>
+                </ul>
+                <div *ngIf="menuSelecionado[0].Status === 'button primary fit small'">
+                    <select name="option-notes" id="option-notes">
+                        <option *ngFor="let inst of instruments" [value]="inst.Name">{{ inst.Name }}</option>
+                    </select>
+                </div>
+                <div *ngIf="menuSelecionado[1].Status === 'button primary fit small'">criar</div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+[
+  {
+    "voz": "Soprano",
+    "tessitura": [
+      {
+        "alto": "C",
+        "altoOitava": 6,
+        "baixo": "C",
+        "baixoOitava": 4
+      }
+    ]
+  },
+  {
+    "voz": "Alto",
+    "tessitura": [
+      {
+        "alto": "E",
+        "altoOitava": 5,
+        "baixo": "E",
+        "baixoOitava": 3
+      }
+    ]
+  },
+  {
+    "voz": "Tenor",
+    "tessitura": [
+      {
+        "alto": "C",
+        "altoOitava": 5,
+        "baixo": "C",
+        "baixoOitava": 3
+      }
+    ]
+  },
+  {
+    "voz": "Baixo",
+    "tessitura": [
+      {
+        "alto": "E",
+        "altoOitava": 4,
+        "baixo": "E",
+        "baixoOitava": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,183 @@
+<section>
+    <div class="content">
+        <header>
+            <h2>Geral</h2>
+        </header>
+        <div class="row">
+            <div class="col-3 col-12-medium">
+                <p>Configuração geral do aplicativo. Podemos escolher a tonalidade e/ou instrumento que serão o padrão
+                    na inicialização do app. Podemos também manter a última tonalidade e/ou intrumento
+                    escolhido
+                </p>
+                <p>Temos também uma seção de configuração destinada a condução de vozes (Soprano, Alto, Tenor e Baixo)
+                    que servirá como parâmetro tanto para os estudos de contraponto quanto a parte de Harmonia aplicada.
+                </p>
+            </div>
+            <div class="col-9 col-12-medium">
+                <div class="row gtr-uniform">
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="checkTone" [checked]="config.RecordTone"
+                            (change)="onCheckToneChange($event)">
+                        <label for="checkTone">Manter a última tonalidade</label>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="checkInstrument" [checked]="config.RecordInstrument"
+                            (change)="onCheckInstrumentChange($event)">
+                        <label for="checkInstrument">Manter o último instrumento</label>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <select name="option-notes" id="option-notes" (change)="onToneChange($event, true)">
+                            <option value="">Tonalidade inicial: {{config.InitialTone}}</option>
+                            <option *ngFor="let note of notes" [value]="note.nota">{{ note.nota }}</option>
+                        </select>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <select name="option-intruments" id="option-intruments" (change)="onToneChange($event, false)">
+                            <option value="">Instrumento inicial: {{config.InitialInstrument}}</option>
+                            <option *ngFor="let instrument of instruments" [value]="instrument.Name">{{ instrument.Name
+                                }}</option>
+                        </select>
+                    </div>
+                </div>
+                <hr class="major">
+                <h3>Tessitura das vozes</h3>
+                <div *ngIf="SATB && SATB.length > 1">
+                    <div class="row">
+                        <div class="col-6 col-12-small">
+                            <h4>Soprano</h4>
+                            <div class="row gtr-uniform">
+                                <div class="col-6 col-12-small">
+                                    <select (input)="onToneTessituraChange($event, 0, true)">
+                                        <option value="">Nota aguda: {{
+                                            SATB[0].tessitura[0].alto }}</option>
+                                        <option *ngFor="let note of notes" [value]="note.nota">{{ note.nota }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <label for="range-soprano-agudo" class="form-label">Oitava aguda: {{
+                                        SATB[0].tessitura[0].altoOitava }}a</label>
+                                    <input type="range" class="" id="range-soprano-agudo" min="0" max="7" step="1"
+                                        [value]="SATB[0].tessitura[0].altoOitava"
+                                        (input)="onRangeChange($event, 0, true)">
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <select (input)="onToneTessituraChange($event, 0, false)">
+                                        <option value="">Nota grave: {{
+                                            SATB[0].tessitura[0].baixo }}</option>
+                                        <option *ngFor="let note of notes" [value]="note.nota">{{ note.nota }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <label for="range-soprano-grave" class="form-label">Oitava grave: {{
+                                        SATB[0].tessitura[0].baixoOitava }}a</label>
+                                    <input type="range" class="" id="range-soprano-grave" min="0" max="7" step="1"
+                                        [value]="SATB[0].tessitura[0].baixoOitava"
+                                        (input)="onRangeChange($event, 0, false)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-6 col-12-small">
+                            <h4>Alto</h4>
+                            <div class="row gtr-uniform">
+                                <div class="col-6 col-12-small">
+                                    <select (input)="onToneTessituraChange($event, 1, true)">
+                                        <option value="">Nota aguda: {{
+                                            SATB[1].tessitura[0].alto }}</option>
+                                        <option *ngFor="let note of notes" [value]="note.nota">{{ note.nota }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <label for="range-alto-agudo" class="form-label">Oitava aguda: {{
+                                        SATB[1].tessitura[0].altoOitava }}a</label>
+                                    <input type="range" class="" id="range-alto-agudo" min="0" max="7" step="1"
+                                        [value]="SATB[1].tessitura[0].altoOitava"
+                                        (input)="onRangeChange($event, 1, true)">
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <select (input)="onToneTessituraChange($event, 1, false)">
+                                        <option value="">Nota grave: {{
+                                            SATB[1].tessitura[0].baixo }}</option>
+                                        <option *ngFor="let note of notes" [value]="note.nota">{{ note.nota }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <label for="range-alto-grave" class="form-label">Oitava grave: {{
+                                        SATB[1].tessitura[0].baixoOitava }}a</label>
+                                    <input type="range" class="" id="range-alto-grave" min="0" max="7" step="1"
+                                        [value]="SATB[1].tessitura[0].baixoOitava"
+                                        (input)="onRangeChange($event, 1, false)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <h4>Tenor</h4>
+                            <div class="row gtr-uniform">
+                                <div class="col-6 col-12-small">
+                                    <select (input)="onToneTessituraChange($event, 2, true)">
+                                        <option value="">Nota aguda: {{
+                                            SATB[2].tessitura[0].alto }}</option>
+                                        <option *ngFor="let note of notes" [value]="note.nota">{{ note.nota }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <label for="range-tenor-agudo" class="form-label">Oitava aguda: {{
+                                        SATB[2].tessitura[0].altoOitava }}a</label>
+                                    <input type="range" class="" id="range-tenor-agudo" min="0" max="7" step="1"
+                                        [value]="SATB[2].tessitura[0].altoOitava"
+                                        (input)="onRangeChange($event, 1, true)">
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <select (input)="onToneTessituraChange($event, 2, false)">
+                                        <option value="">Nota grave: {{
+                                            SATB[2].tessitura[0].baixo }}</option>
+                                        <option *ngFor="let note of notes" [value]="note.nota">{{ note.nota }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <label for="range-tenor-grave" class="form-label">Oitava grave: {{
+                                        SATB[2].tessitura[0].baixoOitava }}a</label>
+                                    <input type="range" class="" id="range-tenor-grave" min="0" max="7" step="1"
+                                        [value]="SATB[2].tessitura[0].baixoOitava"
+                                        (input)="onRangeChange($event, 1, false)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <h4>Baixo</h4>
+                            <div class="row gtr-uniform">
+                                <div class="col-6 col-12-small">
+                                    <select (input)="onToneTessituraChange($event, 3, true)">
+                                        <option value="">Nota aguda: {{
+                                            SATB[3].tessitura[0].alto }}</option>
+                                        <option *ngFor="let note of notes" [value]="note.nota">{{ note.nota }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <label for="range-baixo-agudo" class="form-label">Oitava aguda: {{
+                                        SATB[3].tessitura[0].altoOitava }}a</label>
+                                    <input type="range" class="" id="range-baixo-agudo" min="0" max="7" step="1"
+                                        [value]="SATB[3].tessitura[0].altoOitava"
+                                        (input)="onRangeChange($event, 1, true)">
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <select (input)="onToneTessituraChange($event, 3, false)">
+                                        <option value="">Nota grave: {{
+                                            SATB[3].tessitura[0].baixo }}</option>
+                                        <option *ngFor="let note of notes" [value]="note.nota">{{ note.nota }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <label for="range-baixo-grave" class="form-label">Oitava grave: {{
+                                        SATB[3].tessitura[0].baixoOitava }}a</label>
+                                    <input type="range" class="" id="range-baixo-grave" min="0" max="7" step="1"
+                                        [value]="SATB[3].tessitura[0].baixoOitava"
+                                        (input)="onRangeChange($event, 1, false)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

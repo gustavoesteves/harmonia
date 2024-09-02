@@ -1,0 +1,40 @@
+<section>
+    <div class="content">
+      <header>
+        <h2>Acordes</h2>
+      </header>
+      <div class="row">
+        <div class="col-3 col-12-medium">
+          <p>A tabela ao lado traz não só os acordes diatônicos da tonalidade previamente selecionada, como também suas
+            notas, escalas relevantes que podem ser usadas em seu improviso, bem como as notas extendidas para aumentar o
+            grau dissonante, ou simplesmente dar outro contorno melódico e/ou colorido ao acorde.</p>
+          <p>As extenções 9a, 11a, 13a são respectivamente a 2a, 4a e 6a só que normalmente consideradas uma oitava acima
+            da fundamental do acorde. Existe ainda mais um acorde não mencionado nesta tabela que seria a substituição da
+            sétima (maior ou menor), por um acorde de sexta, sendo esta sempre maior. Portanto teremos tantos o acorde
+            Imaj7 quanto I6. É importante salientar que é considerado a sexta quando esta na oitava da nota da
+            fundamental, se estiver acima será uma 13a.</p>
+        </div>
+        <div class="col-9 col-12-medium">
+          <h3>Acordes do modo maior</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th *ngFor="let column of header" scope="col">{{column}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of majorMode">
+                <td *ngFor="let column of header">
+                  <div *ngIf="column === 'Acorde'">
+                    <a class="loadChords" href="#popup" [innerHTML]="item.Acorde" (click)="loadChords(item)"></a>
+                  </div>
+                  <div *ngIf="column != 'Acorde'" [innerHTML]="item[column]"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  
