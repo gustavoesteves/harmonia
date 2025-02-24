@@ -5,6 +5,8 @@ import { menuApp } from './menu/menu';
 import { readData } from "./service/read";
 import { writeData } from './service/write';
 
+console.log('Iniciando Electron a partir do main.ts compilado!');
+
 let win: BrowserWindow | null = null;
 const args = process.argv.slice(1),
   serve = args.some(val => val === '--serve');
