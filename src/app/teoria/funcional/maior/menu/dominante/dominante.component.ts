@@ -38,6 +38,18 @@ export class DominanteComponent {
     private ngZone: NgZone
   ) { }
 
+  ngOnInit() {
+    this.tonalService.currentTonality.subscribe(value => {
+      const note = value[value.length - 1];
+      this.acordeSus = this.GetAcordeSus(note);
+      this.primeiraOpcional = this.GetOptionalChords(note);
+      this.segundaOpcional = this.GetSegundaOpcional(note);
+      this.terceiraOpcional = this.GetTerceiraOpcional(note);
+      this.alteredDominant = this.GetAlteredDominant(note);
+      this.symetricDominant = this.GetSymetricDominant(note);
+    });
+  }
+
   changeMenu(menu: number) {
     for (let index = 0; index < this.menuSelecionado.length; index++) {
       if (menu === this.menuSelecionado[index].Name) {
@@ -56,18 +68,6 @@ export class DominanteComponent {
         this.menuOpcionais[index].Status = "button fit small";
       }
     }
-  }
-
-  ngOnInit() {
-    this.tonalService.currentTonality.subscribe(value => {
-      const note = value[value.length - 1];
-      this.acordeSus = this.GetAcordeSus(note);
-      this.primeiraOpcional = this.GetOptionalChords(note);
-      this.segundaOpcional = this.GetSegundaOpcional(note);
-      this.terceiraOpcional = this.GetTerceiraOpcional(note);
-      this.alteredDominant = this.GetAlteredDominant(note);
-      this.symetricDominant = this.GetSymetricDominant(note);
-    });
   }
 
   GetAcordeSus(note: string) {

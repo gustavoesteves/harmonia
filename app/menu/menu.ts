@@ -3,7 +3,7 @@ import { MenuItemConstructorOptions } from 'electron';
 const isMac = process.platform === 'darwin';
 
 export const menuApp: MenuItemConstructorOptions[] = [
-    ...(isMac ? [{
+    {
         label: 'Harmonia',
         submenu: [
             { role: 'about' as const },
@@ -17,7 +17,7 @@ export const menuApp: MenuItemConstructorOptions[] = [
             { type: 'separator' as const },
             { role: 'quit' as const }
         ]
-    }] : []),
+    },
     {
         label: 'Tonalidade',
         submenu: [
@@ -125,6 +125,9 @@ export const menuApp: MenuItemConstructorOptions[] = [
     {
         label: 'Ferramentas',
         submenu: [
+            {
+                label: 'Emprestimo Modal'
+            },
             {
                 label: 'Frases aleatórias'
             },

@@ -8,6 +8,8 @@ import { DominanteComponent } from './dominante/dominante.component';
 import { DominanteSecundariaComponent } from "./dominante-secundaria/dominante-secundaria.component";
 import { ProgressaoComponent } from "./progressao/progressao.component";
 import { IConfigMenu } from '../../../../services/interfaces/menu.interface';
+import { SubdominantenanteComponent } from './subdominantenante/subdominantenante.component';
+import { DiminutoComponent } from './diminuto/diminuto.component';
 
 @Component({
   selector: 'app-menu',
@@ -20,7 +22,9 @@ import { IConfigMenu } from '../../../../services/interfaces/menu.interface';
     AcordesComponent,
     DominanteComponent,
     DominanteSecundariaComponent,
-    ProgressaoComponent
+    ProgressaoComponent,
+    SubdominantenanteComponent,
+    DiminutoComponent
   ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
@@ -33,6 +37,8 @@ export class MenuComponent implements OnInit {
     { Name: 3, Status: "" },
     { Name: 4, Status: "" },
     { Name: 5, Status: "" },
+    { Name: 6, Status: "" },
+    { Name: 7, Status: "" },
   ];
 
   ngOnInit() {

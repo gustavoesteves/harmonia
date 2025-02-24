@@ -33,6 +33,13 @@
                 <div *ngIf="menuSelecionado[5].Status === 'ActiveMenu'">
                     <app-progressao></app-progressao>
                 </div>
+                <div *ngIf="menuSelecionado[6].Status === 'ActiveMenu'">
+                    <app-subdominantenante></app-subdominantenante>
+                </div>
+                <div *ngIf="menuSelecionado[7].Status === 'ActiveMenu'">
+                    <app-diminuto></app-diminuto>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -52,8 +59,8 @@
                     <li><a class={{menuSelecionado[3].Status}} (click)="changeMenu(3)">Dominantes</a></li>
                     <li><a class={{menuSelecionado[4].Status}} (click)="changeMenu(4)">Dominantes secundárias</a></li>
                     <li><a class={{menuSelecionado[5].Status}} (click)="changeMenu(5)">A progressão II- &#8594; V</a></li>
-                    <li><a>Subdominantes</a></li>
-                    <li><a>Diminutos</a></li>
+                    <li><a class={{menuSelecionado[6].Status}} (click)="changeMenu(6)">Subdominantes</a></li>
+                    <li><a class={{menuSelecionado[7].Status}} (click)="changeMenu(7)">Diminutos</a></li>
                     <li><a>Resumo</a></li>
                 </ul>
                 <!-- Footer -->

@@ -26,7 +26,7 @@ export class DominanteSecundariaComponent {
 
   ngOnInit() {
     this.tonalService.currentTonality.subscribe(value => {
-      const note = 'C';//value[value.length - 1];
+      const note = value[value.length - 1];
       this.secondaryDominants = this.GetSecondaryDominants(note);
       this.extendedDominants = this.GetExtendedDominants(note);
     });

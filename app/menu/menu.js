@@ -3,21 +3,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.menuApp = void 0;
 const isMac = process.platform === 'darwin';
 exports.menuApp = [
-    ...(isMac ? [{
-            label: 'Harmonia',
-            submenu: [
-                { role: 'about' },
-                { type: 'separator' },
-                {
-                    label: 'Configuração', click: () => {
-                        const { ipcMain } = require('electron');
-                        ipcMain.emit('navigate-to', null, 'config');
-                    }
-                },
-                { type: 'separator' },
-                { role: 'quit' }
-            ]
-        }] : []),
+    {
+        label: 'Harmonia',
+        submenu: [
+            { role: 'about' },
+            { type: 'separator' },
+            {
+                label: 'Configuração', click: () => {
+                    const { ipcMain } = require('electron');
+                    ipcMain.emit('navigate-to', null, 'config');
+                }
+            },
+            { type: 'separator' },
+            { role: 'quit' }
+        ]
+    },
     {
         label: 'Tonalidade',
         submenu: [
@@ -125,6 +125,9 @@ exports.menuApp = [
     {
         label: 'Ferramentas',
         submenu: [
+            {
+                label: 'Emprestimo Modal'
+            },
             {
                 label: 'Frases aleatórias'
             },

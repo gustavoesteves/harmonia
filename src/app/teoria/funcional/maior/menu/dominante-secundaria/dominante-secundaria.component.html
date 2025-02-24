@@ -25,12 +25,12 @@
                     </li>
                 </ul>
             </div>
+
             <div class="col-8 col-12-medium">
                 <ul class="actions">
                     <li><a class={{menuSelecionado[0].Status}} (click)="changeMenu(0)">Acordes</a></li>
                     <li><a class={{menuSelecionado[1].Status}} (click)="changeMenu(1)">Extendendo</a></li>
                 </ul>
-<!--
                 <div *ngIf="menuSelecionado[0].Status === 'button primary fit small'">
                     <table class="table">
                         <thead>
@@ -52,6 +52,7 @@
                         </tbody>
                     </table>
                 </div>
+
                 <div *ngIf="menuSelecionado[1].Status === 'button primary fit small'">
                     <p>Conseguimos aumentar a tensão/relaxamento com a progressão do grau corrente em
                         direção a uma quinta abaixo. Portanto seria possível encadearmos por exemplo, V/III → V/VI →
@@ -84,7 +85,6 @@
                         </tbody>
                     </table>
                 </div>
--->
             </div>
         </div>
     </div>
