@@ -33,7 +33,7 @@
   "build:dev": "npm run build -- -c dev",
   "build:prod": "npm run build -- -c production",
   "web:build": "npm run build -- -c web-production",
-  "electron": "tsc -p tsconfig.electron.json && wait-on tcp:4200 && electron .",
+  "electron": "tsc -p tsconfig.electron.json && wait-on tcp:4200 && electron . --serve",
   "electron:local": "npm run build:prod && electron .",
   "electron:build": "npm run build:prod && electron-builder build --publish=never",
   "test": "ng test --watch=false",

@@ -35,20 +35,17 @@ function createWindow(): BrowserWindow {
   if (serve) {
     const debug = require('electron-debug');
     debug();
-
-    //require('electron-reloader')(module);
     win.loadURL('http://localhost:4200');
   } else {
-    // Path when running electron executable
-    let pathIndex = './index.html';
-
-    if (fs.existsSync(path.join(__dirname, '../dist/index.html'))) {
-      // Path when running electron in local folder
-      pathIndex = '../dist/index.html';
+    // Caminho correto para o Angular compilado
+    const distPath = path.join(__dirname, '../dist/harmonia/index.html');
+    if (fs.existsSync(distPath)) {
+      const url = new URL('file://' + distPath);
+      win.loadURL(url.href);
+    } else {
+      console.error('Arquivo index.html não encontrado em', distPath);
+      win.loadURL('file://' + path.join(__dirname, '../src/index.html')); // Fallback, opcional
     }
-
-    const url = new URL(path.join('file:', __dirname, pathIndex));
-    win.loadURL(url.href);
   }
 
   // Emitted when the window is closed.
@@ -71,6 +68,7 @@ ipcMain.on('tone', (event, note) => {
     win.webContents.send('tone', note);
   }
 });
+
 // #endregion
 
 // #region CRUDAngularToNode
