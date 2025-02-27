@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SubdominantenanteComponent {
   header = ['Grau', 'Acorde', 'Notas', 'Escalas', 'Extenções', 'Cadência'];
-  substituteDominants: INotes[] = [];
+  substituteDominants: INotesComplete[] = [];
 
   constructor(private tonalService: TonalService) { }
 
@@ -111,5 +111,9 @@ export class SubdominantenanteComponent {
     });
 
     return result;
+  }
+
+  loadChords(chord: INotes) {
+    this.tonalService.pushChord(chord);
   }
 }

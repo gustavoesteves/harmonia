@@ -16,7 +16,6 @@ import { DiminutoComponent } from './diminuto/diminuto.component';
   standalone: true,
   imports: [
     CommonModule,
-    DrawChordsComponent,
     IntroducaoComponent,
     CadenciaComponent,
     AcordesComponent,

@@ -44,7 +44,9 @@ export class AppComponent implements OnInit {
       //recebendo alteração de Tonalidade do menu
       (window as any).electron.receive('tone', (note: string) => {
         if (note !== "") {
+          this.config.LastTone = note;
           this.tonalService.pushTonality(note);
+          this.ChangeConfig();
         }
       });
     }
@@ -56,6 +58,15 @@ export class AppComponent implements OnInit {
     try {
       this.config = await (window as any).electron.readData('config.json');
       this.tonalService.pushTonality(this.config.InitialTone);
+    } catch (error) {
+      console.error('Error loading config:', error);
+    }
+  }
+
+  async ChangeConfig() {
+    try {
+      await (window as any).electron.writeData('config.json', this.config);
+      console.log("ChangeConfig");
     } catch (error) {
       console.error('Error loading config:', error);
     }

@@ -1,11 +1,37 @@
 <section>
     <div class="content">
         <header>
-            <h2>Diminuto</h2>
+            <h2>Diminutos</h2>
         </header>
         <div class="row">
             <div class="col-4 col-12-medium">
-
+                <p>O VII-7b5 (ex.: Bm7b5 em C) é um ii relativo em cadências V-I, trazendo tensão ao V.</p>
+                <p>Os dim7 (#I°7 a #V°7: C#dim7, D#dim7, Fdim7, F#dim7, G#dim7) são V7b9 sem fundamental, resolvendo a
+                    terças menores acima/abaixo.</p>
+                <p>Os bdim7 (bIII°7, bVI°7: Ebdim7, Abdim7) e Idim7, Vdim7 (Cdim7, Gdim7) adicionam cromatismos ou
+                    substituem dominantes.</p>
+                <p>Substituições: II- → VII-7b5, ou dim7 → V → I.</p>
+            </div>
+            <div class="col-8 col-12-medium">
+                <h2>Acordes</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let column of header" scope="col">{{column}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of diminishedChords">
+                            <td *ngFor="let column of header">
+                                <div *ngIf="column === 'Acorde'">
+                                    <a class="loadChords" href="#popup" [innerHTML]="item.Acorde"
+                                        (click)="loadChords(item)"></a>
+                                </div>
+                                <div *ngIf="column != 'Acorde'" [innerHTML]="item[column]"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

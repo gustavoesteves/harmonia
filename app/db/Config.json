@@ -1,7 +1,7 @@
 {
   "InitialTone": "Bb",
   "RecordTone": false,
-  "LastTone": "",
+  "LastTone": "A",
   "InitialInstrument": "Piano",
   "RecordInstrument": true,
   "LastInstrument": ""

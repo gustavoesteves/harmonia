@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
   async LoadConfig() {
     try {
       this.config = await (window as any).electron.readData('config.json');
-      this.tonalService.pushTonality(this.config.InitialTone);
+      //this.tonalService.pushTonality(this.config.InitialTone);
     } catch (error) {
       console.error('Error loading config:', error);
     }

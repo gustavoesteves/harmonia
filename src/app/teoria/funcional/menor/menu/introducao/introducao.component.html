@@ -1,0 +1,106 @@
+<section>
+    <div class="content">
+        <header>
+            <h2>Introdução</h2>
+        </header>
+        <div class="row">
+            <div class="col-12 col-12-medium">
+                <p>Assim como o modo Maior foi extraído a partir do Jônico, o Menor será extraído do Eólio,
+                    considerando a tonalidade de lá menor teríamos: lá, sí, dó, ré, mi, fá e sol, temos assim a escala a
+                    Menor
+                    Natural. Entretanto para termos a sétima sensível do modo maior (considerando Dó Maior: si → dó),
+                    precisamos
+                    elevar o sol a sol#, ficando: lá, sí, dó, ré, mi, fá e sol#, criando assim a escala Menor Harmônica.
+                    Como esse
+                    salto de fá para sol# é de segunda aumentada, foi criada mais uma escala, a menor Menor Melódica,
+                    ficando: lá,
+                    sí, dó, ré, mi, fá# e sol#.</p>
+                <p>A abordagem contemporâne ainda considera mais duas escalas para formação de modos menores, sendo:
+                    Dórico e
+                    Frígio.Em Dórico teríamos: lá, sí, dó, ré, mi, fá# e sol e em Frígio teríamos: lá, síb, dó, ré, mi,
+                    fá e sol.
+                </p>
+                <h2>Cadência</h2>
+                <p></p>
+                <form>
+                    <ul class="actions">
+                        <li><button type="button" class={{btnGrau}} (click)="changeView('grau')">Graus</button></li>
+                        <li><button type="button" class={{btnAcorde}} (click)="changeView('acorde')">Acordes</button>
+                        </li>
+                    </ul>
+                </form>
+                <div class="table-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>{{notes[3].note}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><i class="fas fa-long-arrow-alt-right"></i></td>
+                                <td></td>
+                                <td><i class="fas fa-long-arrow-alt-down"></i></td>
+                                <td></td>
+                                <td><i class="fas fa-long-arrow-alt-right"></i></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>{{notes[6].note}}</td>
+                                <td><i class="fas fa-long-arrow-alt-right"></i></td>
+                                <td>{{notes[2].note}}</td>
+                                <td><i class="fas fa-long-arrow-alt-right"></i></td>
+                                <td>{{notes[5].note}}</td>
+                                <td><i class="fas fa-long-arrow-alt-right"></i></td>
+                                <td>{{notes[1].note}}</td>
+                                <td><i class="fas fa-long-arrow-alt-right"></i></td>
+                                <td>{{notes[4].note}}</td>
+                                <td><i class="fas fa-long-arrow-alt-right"></i></td>
+                                <td>{{notes[0].note}}</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><i class="fas fa-long-arrow-alt-left"></i></td>
+                                <td></td>
+                                <td><i class="fas fa-long-arrow-alt-down"></i></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>{{notes[6].note}}</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

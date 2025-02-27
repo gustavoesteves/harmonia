@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.menuApp = void 0;
 const isMac = process.platform === 'darwin';
+const electron_1 = require("electron");
 exports.menuApp = [
     {
         label: 'Harmonia',
@@ -10,8 +11,7 @@ exports.menuApp = [
             { type: 'separator' },
             {
                 label: 'Configuração', click: () => {
-                    const { ipcMain } = require('electron');
-                    ipcMain.emit('navigate-to', null, 'config');
+                    electron_1.ipcMain.emit('navigate-to', null, 'config');
                 }
             },
             { type: 'separator' },
@@ -23,66 +23,88 @@ exports.menuApp = [
         submenu: [
             {
                 label: 'C', click: () => {
-                    const { ipcMain } = require('electron');
-                    ipcMain.emit('tone', null, 'C');
+                    electron_1.ipcMain.emit('tone', null, 'C');
                 }
             },
             {
                 label: 'C#', click: () => {
-                    const { ipcMain } = require('electron');
-                    ipcMain.emit('tone', null, 'C#');
+                    electron_1.ipcMain.emit('tone', null, 'C#');
                 }
             },
             {
                 label: 'Db', click: () => {
-                    const { ipcMain } = require('electron');
-                    ipcMain.emit('tone', null, 'Db');
+                    electron_1.ipcMain.emit('tone', null, 'Db');
                 }
             },
             {
                 label: 'D', click: () => {
-                    const { ipcMain } = require('electron');
-                    ipcMain.emit('tone', null, 'D');
+                    electron_1.ipcMain.emit('tone', null, 'D');
                 }
             },
             {
-                label: 'D#'
+                label: 'D#', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'D#');
+                }
             },
             {
-                label: 'Eb'
+                label: 'Eb', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'Eb');
+                }
             },
             {
-                label: 'E'
+                label: 'E', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'E');
+                }
             },
             {
-                label: 'F'
+                label: 'F', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'F');
+                }
             },
             {
-                label: 'F#'
+                label: 'F#', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'F#');
+                }
             },
             {
-                label: 'Gb'
+                label: 'Gb', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'Gb');
+                }
             },
             {
-                label: 'G'
+                label: 'G', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'G');
+                }
             },
             {
-                label: 'G#'
+                label: 'G#', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'G#');
+                }
             },
             {
-                label: 'Ab'
+                label: 'Ab', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'Ab');
+                }
             },
             {
-                label: 'A'
+                label: 'A', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'A');
+                }
             },
             {
-                label: 'A#'
+                label: 'A#', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'A#');
+                }
             },
             {
-                label: 'A#'
+                label: 'Bb', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'Bb');
+                }
             },
             {
-                label: 'B'
+                label: 'B', click: () => {
+                    electron_1.ipcMain.emit('tone', null, 'B');
+                }
             },
         ]
     },
@@ -94,11 +116,14 @@ exports.menuApp = [
                 submenu: [
                     {
                         label: 'O modo maior', click: () => {
-                            const { ipcMain } = require('electron');
-                            ipcMain.emit('navigate-to', null, 'funcional-maior');
+                            electron_1.ipcMain.emit('navigate-to', null, 'funcional-maior');
                         }
                     },
-                    { label: 'O modo menor', click: () => { console.log('O modo menor'); } },
+                    {
+                        label: 'O modo menor', click: () => {
+                            electron_1.ipcMain.emit('navigate-to', null, 'funcional-menor');
+                        }
+                    },
                     { label: 'Abordagem Modal', click: () => { console.log('Abordagem Modal'); } }
                 ]
             },

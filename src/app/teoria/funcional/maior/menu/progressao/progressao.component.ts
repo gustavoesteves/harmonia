@@ -19,9 +19,9 @@ export class ProgressaoComponent {
     { Name: 0, Status: "button primary fit small" },
     { Name: 1, Status: "button  fit small" },
   ];
-  header = ['Acorde', 'Notas', 'Escalas', 'Extenções', 'Cadência'];
-  twoFiveSecondaryDominant: INotes[] = [];
-  TwoDimishSecondaryDominant: INotes[] = [];
+  header = ['Acorde', 'Grau', 'Escalas', 'Extenções', 'Cadência'];
+  twoFiveSecondaryDominant: INotesComplete[] = [];
+  TwoDimishSecondaryDominant: INotesComplete[] = [];
 
   constructor(private tonalService: TonalService,
     private ngZone: NgZone
@@ -199,5 +199,9 @@ export class ProgressaoComponent {
     });
 
     return result;
+  }
+
+  loadChords(chord: INotes) {
+    this.tonalService.pushChord(chord);
   }
 }

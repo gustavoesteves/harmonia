@@ -1,6 +1,7 @@
 import { MenuItemConstructorOptions } from 'electron';
 
 const isMac = process.platform === 'darwin';
+import { ipcMain } from 'electron';
 
 export const menuApp: MenuItemConstructorOptions[] = [
     {
@@ -10,7 +11,6 @@ export const menuApp: MenuItemConstructorOptions[] = [
             { type: 'separator' as const },
             {
                 label: 'Configuração', click: () => {
-                    const { ipcMain } = require('electron');
                     ipcMain.emit('navigate-to', null, 'config');
                 }
             },
@@ -23,66 +23,88 @@ export const menuApp: MenuItemConstructorOptions[] = [
         submenu: [
             {
                 label: 'C', click: () => {
-                    const { ipcMain } = require('electron');
                     ipcMain.emit('tone', null, 'C');
                 }
             },
             {
                 label: 'C#', click: () => {
-                    const { ipcMain } = require('electron');
                     ipcMain.emit('tone', null, 'C#');
                 }
             },
             {
                 label: 'Db', click: () => {
-                    const { ipcMain } = require('electron');
                     ipcMain.emit('tone', null, 'Db');
                 }
             },
             {
                 label: 'D', click: () => {
-                    const { ipcMain } = require('electron');
                     ipcMain.emit('tone', null, 'D');
                 }
             },
             {
-                label: 'D#'
+                label: 'D#', click: () => {
+                    ipcMain.emit('tone', null, 'D#');
+                }
             },
             {
-                label: 'Eb'
+                label: 'Eb', click: () => {
+                    ipcMain.emit('tone', null, 'Eb');
+                }
             },
             {
-                label: 'E'
+                label: 'E', click: () => {
+                    ipcMain.emit('tone', null, 'E');
+                }
             },
             {
-                label: 'F'
+                label: 'F', click: () => {
+                    ipcMain.emit('tone', null, 'F');
+                }
             },
             {
-                label: 'F#'
+                label: 'F#', click: () => {
+                    ipcMain.emit('tone', null, 'F#');
+                }
             },
             {
-                label: 'Gb'
+                label: 'Gb', click: () => {
+                    ipcMain.emit('tone', null, 'Gb');
+                }
             },
             {
-                label: 'G'
+                label: 'G', click: () => {
+                    ipcMain.emit('tone', null, 'G');
+                }
             },
             {
-                label: 'G#'
+                label: 'G#', click: () => {
+                    ipcMain.emit('tone', null, 'G#');
+                }
             },
             {
-                label: 'Ab'
+                label: 'Ab', click: () => {
+                    ipcMain.emit('tone', null, 'Ab');
+                }
             },
             {
-                label: 'A'
+                label: 'A', click: () => {
+                    ipcMain.emit('tone', null, 'A');
+                }
             },
             {
-                label: 'A#'
+                label: 'A#', click: () => {
+                    ipcMain.emit('tone', null, 'A#');
+                }
             },
             {
-                label: 'A#'
+                label: 'Bb', click: () => {
+                    ipcMain.emit('tone', null, 'Bb');
+                }
             },
             {
-                label: 'B'
+                label: 'B', click: () => {
+                    ipcMain.emit('tone', null, 'B');
+                }
             },
         ]
     },
@@ -94,11 +116,14 @@ export const menuApp: MenuItemConstructorOptions[] = [
                 submenu: [
                     {
                         label: 'O modo maior', click: () => {
-                            const { ipcMain } = require('electron');
                             ipcMain.emit('navigate-to', null, 'funcional-maior');
                         }
                     },
-                    { label: 'O modo menor', click: () => { console.log('O modo menor'); } },
+                    {
+                        label: 'O modo menor', click: () => {
+                            ipcMain.emit('navigate-to', null, 'funcional-menor');
+                        }
+                    },
                     { label: 'Abordagem Modal', click: () => { console.log('Abordagem Modal'); } }
                 ]
             },

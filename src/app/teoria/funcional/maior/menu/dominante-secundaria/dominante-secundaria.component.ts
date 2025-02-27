@@ -16,8 +16,8 @@ import { IConfigMenu } from '../../../../../services/interfaces/menu.interface';
 })
 export class DominanteSecundariaComponent {
   header = ['Grau', 'Acorde', 'Notas', 'Escalas', 'Extenções'];
-  secondaryDominants: INotes[] = [];
-  extendedDominants: INotes[] = [];
+  secondaryDominants: INotesComplete[] = [];
+  extendedDominants: INotesComplete[] = [];
   menuSelecionado: IConfigMenu[] = [
     { Name: 0, Status: "button primary fit small" },
     { Name: 1, Status: "button  fit small" },
@@ -114,24 +114,6 @@ export class DominanteSecundariaComponent {
       Cadência: ''
     });
 
-    // V7b5/III
-    changeNote = Note.transpose(note, '7M');
-    result.push({
-      Grau: 'V7b5/III',
-      Acorde: changeNote + '7b5',
-      Notas: Chord.get(changeNote + '7b5').notes.toString(),
-      Escalas: this.tonalService.GetScales(changeNote, [], [], ['3M', '5d', '6m', '7m']),
-      Extenções: '(b9, #9, b13) <br> (' +
-        Note.transpose(changeNote, '2m') + ', ' +
-        Note.transpose(changeNote, '3m') + ', ' +
-        Note.transpose(changeNote, '6m') + ')',
-      NotasExtendidas:
-        Note.transpose(changeNote, '2m') + ', ' +
-        Note.transpose(changeNote, '3m') + ', ' +
-        Note.transpose(changeNote, '6m'),
-      Cadência: ''
-    });
-
     // V7/IV
     result.push({
       Grau: 'V/IV',
@@ -182,5 +164,9 @@ export class DominanteSecundariaComponent {
     });
 
     return result;
+  }
+
+  loadChords(chord: INotes) {
+    this.tonalService.pushChord(chord);
   }
 }
