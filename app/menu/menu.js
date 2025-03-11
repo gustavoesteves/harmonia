@@ -134,8 +134,9 @@ exports.menuApp = [
                 ]
             },
             {
-                label: 'Contraponto',
-                click: () => { console.log('Contraponto'); }
+                label: 'Contraponto', click: () => {
+                    electron_1.ipcMain.emit('navigate-to', null, 'contraponto');
+                }
             },
             {
                 label: 'Arranjo',

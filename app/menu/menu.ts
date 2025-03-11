@@ -134,8 +134,9 @@ export const menuApp: MenuItemConstructorOptions[] = [
                 ]
             },
             {
-                label: 'Contraponto',
-                click: () => { console.log('Contraponto'); }
+                label: 'Contraponto', click: () => {
+                    ipcMain.emit('navigate-to', null, 'contraponto')
+                }
             },
             {
                 label: 'Arranjo',

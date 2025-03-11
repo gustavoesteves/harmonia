@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent } from './funcional/maior/menu/menu.component';
 import { MenuMenorComponent } from './funcional/menor/menu/menu-menor.component';
+import { ContrapontoComponent } from './contraponto/contraponto.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,9 @@ const routes: Routes = [
   },
   {
     path: 'funcional-menor', component: MenuMenorComponent
+  },
+  {
+    path: 'contraponto', component: ContrapontoComponent
   }
 ];
 

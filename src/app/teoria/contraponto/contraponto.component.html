@@ -19,10 +19,10 @@
                     <app-introducao></app-introducao>
                 </div>
                 <div *ngIf="menuSelecionado[1].Status === 'ActiveMenu'">
-                    <app-cadencia></app-cadencia>
+                    <app-primeira></app-primeira>
                 </div>
                 <div *ngIf="menuSelecionado[2].Status === 'ActiveMenu'">
-                    <app-modos></app-modos>
+                    <app-segunda></app-segunda>
                 </div>
             </div>
         </div>
@@ -34,14 +34,14 @@
             <!-- Menu -->
             <nav class="menu">
                 <header class="major">
-                    <h2>O Modo Menor</h2>
+                    <h2>Contraponto</h2>
                 </header>
                 <ul>
                     <li><a class={{menuSelecionado[0].Status}} (click)="changeMenu(0)">Introdução</a></li>
-                    <li><a class={{menuSelecionado[1].Status}} (click)="changeMenu(1)">Cadência</a></li>
-                    <li><a class={{menuSelecionado[2].Status}} (click)="changeMenu(2)">Acordes</a></li>
-                    <li><a class={{menuSelecionado[3].Status}} (click)="changeMenu(3)">Dominantes</a></li>
-                    <li><a class={{menuSelecionado[4].Status}} (click)="changeMenu(4)">Dominantes secundárias</a></li>
+                    <li><a class={{menuSelecionado[1].Status}} (click)="changeMenu(1)">Primeira espécie</a></li>
+                    <li><a class={{menuSelecionado[2].Status}} (click)="changeMenu(2)">Segunda espécie</a></li>
+                    <li><a class={{menuSelecionado[3].Status}} (click)="changeMenu(3)">Terceira espécie</a></li>
+                    <li><a class={{menuSelecionado[4].Status}} (click)="changeMenu(4)">Quarta espécie</a></li>
                     <li><a class={{menuSelecionado[5].Status}} (click)="changeMenu(5)">A progressão II- &#8594; V</a></li>
                     <li><a class={{menuSelecionado[6].Status}} (click)="changeMenu(6)">Subdominantes</a></li>
                     <li><a class={{menuSelecionado[7].Status}} (click)="changeMenu(7)">Diminutos</a></li>
