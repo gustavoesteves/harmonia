@@ -1,8 +1,8 @@
 import { Component, NgZone } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IConfigMenu } from '../../../../../services/interfaces/menu.interface';
-import { TonalService } from '../../../../../services/tonal.service';
-import { INote, INotes, INotesComplete } from '../../../../../services/interfaces/notes.interface';
+import { IConfigMenu } from '../../../../services/interfaces/menu.interface';
+import { TonalService } from '../../../../services/tonal.service';
+import { INote, INotes, INotesComplete } from '../../../../services/interfaces/notes.interface';
 import { Chord, Note } from 'tonal';
 
 @Component({

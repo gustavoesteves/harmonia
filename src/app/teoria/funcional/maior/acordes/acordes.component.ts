@@ -1,8 +1,8 @@
 import { Component, NgZone } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Note } from 'tonal';
-import { TonalService } from '../../../../../services/tonal.service';
-import { INotes, INotesComplete } from '../../../../../services/interfaces/notes.interface';
+import { TonalService } from '../../../../services/tonal.service';
+import { INotes, INotesComplete } from '../../../../services/interfaces/notes.interface';
 
 @Component({
   selector: 'app-acordes',

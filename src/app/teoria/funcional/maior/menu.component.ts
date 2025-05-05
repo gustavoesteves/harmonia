@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DrawChordsComponent } from "../../../draw-chords/draw-chords.component";
 import { IntroducaoComponent } from './introducao/introducao.component';
 import { CadenciaComponent } from './cadencia/cadencia.component';
 import { AcordesComponent } from './acordes/acordes.component';
 import { DominanteComponent } from './dominante/dominante.component';
 import { DominanteSecundariaComponent } from "./dominante-secundaria/dominante-secundaria.component";
 import { ProgressaoComponent } from "./progressao/progressao.component";
-import { IConfigMenu } from '../../../../services/interfaces/menu.interface';
+import { IConfigMenu } from '../../../services/interfaces/menu.interface';
 import { SubdominantenanteComponent } from './subdominantenante/subdominantenante.component';
 import { DiminutoComponent } from './diminuto/diminuto.component';
 

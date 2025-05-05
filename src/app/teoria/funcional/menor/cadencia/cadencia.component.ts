@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, NgZone } from '@angular/core';
 import { Note } from 'tonal';
-import { TonalService } from '../../../../../services/tonal.service';
+import { TonalService } from '../../../../services/tonal.service';
 
 @Component({
   selector: 'app-cadencia',

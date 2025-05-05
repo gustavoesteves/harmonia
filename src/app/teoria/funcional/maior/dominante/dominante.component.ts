@@ -1,9 +1,9 @@
 import { Component, NgZone } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { INotes, INotesComplete } from '../../../../../services/interfaces/notes.interface';
-import { TonalService } from '../../../../../services/tonal.service';
+import { INotes, INotesComplete } from '../../../../services/interfaces/notes.interface';
+import { TonalService } from '../../../../services/tonal.service';
 import { Note, Scale } from 'tonal';
-import { IConfigMenu } from '../../../../../services/interfaces/menu.interface';
+import { IConfigMenu } from '../../../../services/interfaces/menu.interface';
 
 @Component({
   selector: 'app-dominante',

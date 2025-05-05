@@ -1,6 +1,6 @@
 import { Component, NgZone } from '@angular/core';
-import { TonalService } from '../../../../../services/tonal.service';
-import { INotes, INotesComplete } from '../../../../../services/interfaces/notes.interface';
+import { TonalService } from '../../../../services/tonal.service';
+import { INotes, INotesComplete } from '../../../../services/interfaces/notes.interface';
 import { Chord, Note } from 'tonal';
 import { CommonModule } from '@angular/common';
 

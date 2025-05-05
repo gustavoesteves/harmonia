@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IntroducaoComponent } from './introducao/introducao.component';
 import { ModosComponent } from './modos/modos.component';
-import { IConfigMenu } from '../../../../services/interfaces/menu.interface';
+import { IConfigMenu } from '../../../services/interfaces/menu.interface';
 import { CommonModule } from '@angular/common';
 import { CadenciaComponent } from './cadencia/cadencia.component';
 
